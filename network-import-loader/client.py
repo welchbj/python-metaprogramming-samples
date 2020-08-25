@@ -17,7 +17,7 @@ import sys
 
 
 class NetworkModuleImporter(importlib.abc.MetaPathFinder, importlib.abc.InspectLoader):
-    """Lets the import machinery know if our loader should handle this import."""
+    """A network module finder and loader implementation."""
 
     def find_spec(self, fullname, path, target):
         if fullname.startswith('__network'):
